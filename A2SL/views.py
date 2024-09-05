@@ -28,7 +28,7 @@ def animation_view(request):
 		text.lower()
 		#tokenizing the sentence
 		words = word_tokenize(text)
-
+		
 		tagged = nltk.pos_tag(words)
 		tense = {}
 		tense["future"] = len([word for word in tagged if word[1] == "MD"])
